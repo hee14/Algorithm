@@ -26,31 +26,29 @@ public class Q04 {
 		
 		
 		int a = 1;
-		
-        int b = x[n-1] - x[0];
-        
-        int d = 0;
-        int ans = 0;
+        	int b = x[n-1] - x[0];
+        	int d = 0;
+        	int ans = 0;
        
 		while (a <= b) {
-            int mid = (a + b) / 2;
-            int start = x[0];
-            int count = 1;
-            for (int i=0; i<n; ++i) {
-                d = x[i] - start;  // 집 거리
-                if (d >= mid) {
-                    count++;
-                    start = x[i];
-                }
-            }
+            		int mid = (a + b) / 2;
+            		int start = x[0];
+            		int count = 1;
+            		for (int i=0; i<n; ++i) {
+                		d = x[i] - start;  // 집 거리
+                		if (d >= mid) {
+                    			count++;
+                    			start = x[i];
+                		}
+            		}
 
-            if (count >= c) {
-                ans = mid;
-                a = mid + 1;
-            } else {
-                b = mid - 1;
-            }
-        }
+			if (count >= c) {
+				ans = mid;
+				a = mid + 1;
+			} else {
+				b = mid - 1;
+			}
+        	}
 
 		
 		
